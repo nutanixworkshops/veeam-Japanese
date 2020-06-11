@@ -591,7 +591,7 @@ VeeamにNutanix Objectsを設定
 
    .. figure:: images/37.png
 
-#. **S3 Compatible** を選択します。 プロンプトが表示されたら、前に作成したバケットと一致する新しいオブジェクトストレージリポジトリの名前を指定します - *Initials*veeam-bucket, その後 **Next >** をクリックします
+#. **S3 Compatible** を選択します。 プロンプトが表示されたら、前に作成したバケットと一致する新しいオブジェクトストレージリポジトリの名前を指定します - *Initials*veeam-bucket, その後 **Next>** をクリックします
 
 
 #. Accountセクションで、次のように情報を指定します:
