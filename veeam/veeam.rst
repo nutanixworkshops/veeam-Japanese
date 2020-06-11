@@ -19,27 +19,26 @@ Nutanix Mineに関するノート
 
 このラボでは、AHVクラスター用のVeeamおよびバックアップジョブの構成に焦点を当てていますが、同じコンポーネントとプリンシパルの多くがVeeamを搭載したNutanix Mineに適用されることは注目に値します。 MINE with Veeamについての重要なポイント:
 
-- Nutanix Mineは、事前検証済みのNX-ハードウェアで実行される専用のセカンダリストレージバックアップアプライアンスです（HXおよびDXサポートは近日提供予定）。
+Nutanix Mineは、事前検証済みのNX-ハードウェアで実行される専用のセカンダリストレージバックアップアプライアンスです（HXおよびDXサポートは近日提供予定）。
 
-  - XSmall
-  - Small
-  - Medium
-  - Scale-out with the option to leverage Nutanix Objects
-
+- XSmall
+- Small
+- Medium
+- Scale-out with the option to leverage Nutanix Objects
 - 一般的なFoundationは、AHVクラスターをイメージ化および作成するために実行されます
 - "Foundation for Mine"はMINE専用のVMイメージがアップロードされ、AOSとAHVがMineアプライアンスでイメージ化された後に実行されます
 - Foundation for Mine VMは、Standard Foundationと同様のWebインターフェイスを介して自動化します:
-  - Nutanixコンテナの作成
-  - Nutanix Volume Groupの作成
-  - MineクラスターへのVeeamバックアップコンポーネントのデプロイ
-    - Veeam VBR
-    - Nutanix Volume GroupsがアタッチされたVeeam Repository VM
-    - Veeam Windows プロキシ
-  - Nutanix Mine用のカスタムPrism Elementダッシュボードの導入
+- Nutanixコンテナの作成
+- Nutanix Volume Groupの作成
+- MineクラスターへのVeeamバックアップコンポーネントのデプロイ
+- Veeam VBR
+- Nutanix Volume GroupsがアタッチされたVeeam Repository VM
+- Veeam Windows プロキシ
+- Nutanix Mine用のカスタムPrism Elementダッシュボードの導入
 
 .. figure:: images/mine_dashboard.png
 
-今回はNeetanix Mine with Veeamをラボクラスターにデプロイすることはできませんが、詳細、設定手順はこちらにあります。 `<https://ntnx.tips/mine>`_
+今回は **Neetanix Mine with Veeam** をラボクラスターにデプロイすることはできませんが、詳細、設定手順はこちらにあります。 `<https://ntnx.tips/mine>`_
 
 
 Veeam Backup Serverのデプロイ
@@ -598,15 +597,14 @@ VeeamにNutanix Objectsを設定
 
    - Service Point: `https://<IP of Object Store Client IP>``
    - Region: <leave default>
-   - Credentials: **Add** をクリックしAccess keyとSecret keyを入力します。これはNutanixオブジェクトでバケットを作成するときにダウンロードしたファイルになります。
+   - Credentials: **Add** をクリックしAccess keyとSecret keyを入力します。これはNutanixオブジェクトでバケットを作成するときにダウンロードしたファイルになります
 
    .. note::
-
       **Services** > **Objects** に移動してPrism Centralに接続すると、オブジェクトからサービスポイントアドレスを見つけることができます。 テーブル内には、サービスエンドポイントである「Client Used IPs」があります。
 
-  .. figure:: images/38.png
+   .. figure:: images/38.png
 
-  .. figure:: images/39.png
+   .. figure:: images/39.png
 
 #. [Next >] をクリックして、証明書のセキュリティ警告を受け入れます
 
