@@ -596,7 +596,7 @@ VeeamにNutanix Objectsを設定
 
 #. Accountセクションで、次のように情報を指定します:
 
-   - Service Point: https://<IP of Object Store Client IP>
+   - Service Point: `https://<IP of Object Store Client IP>``
    - Region: <leave default>
    - Credentials: **Add** をクリックしAccess keyとSecret keyを入力します。これはNutanixオブジェクトでバケットを作成するときにダウンロードしたファイルになります。
 
@@ -608,7 +608,7 @@ VeeamにNutanix Objectsを設定
 
       .. figure:: images/39.png
 
-    [Next >] をクリックして、証明書のセキュリティ警告を受け入れます
+#. [Next >] をクリックして、証明書のセキュリティ警告を受け入れます
 
 #. 前のセクションで作成したバケットが表示されるはずです。 フォルダの「Browse」をクリックして、「backup」という名前の新しいフォルダを作成します
 
