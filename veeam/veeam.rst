@@ -109,7 +109,7 @@ Veeamバックアップサーバーは、Veeamバックアップインフラス�
 
    .. note:: Windows Explorerがディスクのフォーマットを要求する場合があります-上記のPowershellスクリプトレットがディスクをフォーマットするため、このプロンプトをキャンセルできます
 
-#. Veeamサーバーで、スタートメニューを右クリックして、[**System**]を選択します。 [**Hostname, domain, and workgroup settings**]セクションで、[**Change settings**]をクリックし、[**Change**]をクリックして、Windows内のサーバーの名前をVM名と一致するように変更します (*Initials* \ **-VeeamServer ** ) プロンプトが表示されたら、サーバーを再起動します。
+#. Veeamサーバーで、スタートメニューを右クリックして、[ **System** ]を選択します。 [ **Hostname, domain, and workgroup settings** ]セクションで、[ **Change settings** ]をクリックし、[ **Change** ]をクリックして、Windows内のサーバーの名前をVM名と一致するように変更します (*Initials* \ **-VeeamServer** ) プロンプトが表示されたら、サーバーを再起動します。
 
    .. figure:: images/0aa.png
 
@@ -338,7 +338,7 @@ AHVバックアッププロキシの展開
 
    .. note:: VeeamサーバーがPrismに接続すると、セキュリティ警告が表示されます。 [**続行**]をクリックします
 
-#. VBRは、展開したAHVバックアッププロキシを追加します。 [**Next> **]をクリックします
+#. VBRは、展開したAHVバックアッププロキシを追加します。 [ **Next>** ]をクリックします
 
    .. figure:: images/13.png
 
@@ -354,7 +354,7 @@ Veeam Backup＆Replicationは、VMware vSphereやMicrosoft Hyper-V VMと同様�
 
 AHV VMの場合、Veeam Backup＆ReplicationバックアッププロキシはVMのコンテンツ全体をコピーし、ターゲットの場所に完全バックアップファイル（VBK）を作成します。 フルバックアップファイルは、バックアップチェーンの開始点として機能し、後続のバックアップセッションをフォーマットします。Veeamは、前回のバックアップ以降に変更されたデータブロックのみをコピーし、これらのデータブロックをターゲットの場所の増分バックアップファイルに保存します。 増分バックアップファイルは、完全バックアップファイルと、バックアップチェーン内の先行する増分バックアップファイルに依存しています。 バックアッププロキシは、NutanixのChange Block Tracking（CBT）APIと統合して、VMのデータの変更された部分を特定し、効率的な増分バックアップを可能にします。 AHVバックアッププロキシの新しいバージョンでは、管理者は完全バックアップまたは増分バックアップの両方をスケジュールできるようになりました（以前のバージョンでは、最初の完全バックアップが作成された後、後続のすべてのバックアップは増分バックアップでした）。
 
-#. Prism > VM > Table **で、[**+ Create VM**]をクリックします。
+#. Prism > VM > Table ** で、[ **+ Create VM** ]をクリックします。
 
 #. 次のフィールドに入力して、[**Save**]をクリックします:
 
@@ -380,7 +380,7 @@ AHV VMの場合、Veeam Backup＆ReplicationバックアッププロキシはVM�
 
    .. figure:: images/17.png
 
-#. Veeam Backup Proxy Webコンソール（https:// <ip_address>：8100）にログインします。 **Veeam Backup Proxy Webコンソール**で、ツールバーから[**Jobs**]を選択します。
+#. Veeam Backup Proxy Webコンソール（https:// <ip_address>：8100）にログインします。 **Veeam Backup Proxy Webコンソール** で、ツールバーから[ **Jobs** ]を選択します。
 
    .. figure:: images/18.png
 
@@ -424,7 +424,7 @@ AHV VMの場合、Veeam Backup＆ReplicationバックアッププロキシはVM�
 
 *Initials*\ **-VeeamBackupTest** VMコンソールに戻り、いくつかの小さな変更（インターネットからの壁紙画像のダウンロード、アプリケーションのインストールなど）を行います。
 
-**Veeam Backup Proxy Webコンソール > Backup Jobs**からジョブを選択し、[**Start**]をクリックして手動で増分バックアップをトリガーし、バックアップチェーンに追加します。
+**Veeam Backup Proxy Webコンソール > Backup Jobs **からジョブを選択し、[ **Start** ]をクリックして手動で増分バックアップをトリガーし、バックアップチェーンに追加します。
 
 .. figure:: images/24.png
 
@@ -434,7 +434,7 @@ AHV VMの場合、Veeam Backup＆ReplicationバックアッププロキシはVM�
 
   管理者は、ジョブを選択して[**Active Full**]をクリックすることにより、VMの新しいフルバックアップを手動でトリガーすることもできます。 この新しい完全バックアップはバックアップチェーンをリセットし、その後のすべての増分バックアップはそれを開始点として使用します。 以前の完全バックアップは、構成された保存期間に基づいてバックアップチェーンから削除されるまで、リポジトリに残ります。
 
-**Dashboard**に戻って、クラスターの最も重要なバックアップメトリックの概要を確認します。 Veeam Backup＆Recoveryは、大規模な環境全体でバックアップを管理するためのソリューションを提供しますが、AHVバックアッププロキシは、Nutanix管理者がバックアップを制御し、データ保護に影響する可能性のある主要な問題を特定するための合理化されたHTML5 UIを提供します。
+**Dashboard** に戻って、クラスターの最も重要なバックアップメトリックの概要を確認します。 Veeam Backup＆Recoveryは、大規模な環境全体でバックアップを管理するためのソリューションを提供しますが、AHVバックアッププロキシは、Nutanix管理者がバックアップを制御し、データ保護に影響する可能性のある主要な問題を特定するための合理化されたHTML5 UIを提供します。
 
 .. figure:: images/25.png
 
@@ -443,9 +443,9 @@ VMのリストア
 
 バックアッププロキシWebコンソールを使用して、バックアップからNutanix AHVクラスターにVMを復元できます。 Veeam Backup＆Replication v10では、Nutanixクラスター間での復元がサポートされるようになりました。 復元プロセス中に、バックアッププロキシはVeeamバックアップリポジトリのバックアップからVMディスクデータを取得し、元のVMのディスクが配置されていたストレージコンテナーにコピーして、復元されたVMをNutanix AHVクラスターに登録します。
 
-**Veeam Back Proxy Web Console**で、ツールバーから[**Protected VMs**]を選択します。
+**Veeam Back Proxy Web Console** で、ツールバーから[ **Protected VMs**]を選択します。
 
-テストバックアップVM *Initials*\ **-VeeamBackupTest**を選択し、[**Restore**]をクリックします。
+テストバックアップVM *Initials*\ **-VeeamBackupTest** を選択し、[ **Restore**]をクリックします。
 
 **Add**、**Remove**、および **Point** オプションを使用して、目的のVMを特定の時間に選択的に復元できます。 デフォルトでは、VMは最新のバックアップに基づいて復元されます。
 
@@ -455,7 +455,7 @@ VMのリストア
 
 [**Restore to a new location**]を選択し、[**Next**]をクリックして、既存のVMを上書きするのではなく、バックアップデータからVMのクローンを作成します。
 
-*Initials*\ **-VeeamBackupTest**を選択して、[**Name**]をクリックします。 [**Add suffix**]を選択します。 [**Preserve virtual machine ID**]オプションのチェックを外し、[OK] > [Next]をクリックします：
+*Initials*\ **-VeeamBackupTest** を選択して、[**Name**]をクリックします。 [**Add suffix**]を選択します。 [**Preserve virtual machine ID**]オプションのチェックを外し、[OK] > [Next]をクリックします：
 
 .. figure:: images/27.png
 
@@ -490,11 +490,11 @@ Prismで復元されたVMの電源を入れ、最新の手動バックアップ�
 ファイルレベルリストア
 +++++++++++++++++++++++++++
 
-**Veeam Backup Proxy Web Console**はインフラストラクチャ管理者が必要とするすべての基本的なデータ保護機能を提供しますが、**Veeam Backup＆Replication Console*を使用して**Veeam Backup Server**で追加の高度な機能にアクセスできます。
+**Veeam Backup Proxy Web Console**はインフラストラクチャ管理者が必要とするすべての基本的なデータ保護機能を提供しますが、**Veeam Backup＆Replication Console** を使用して **Veeam Backup Server** で追加の高度な機能にアクセスできます。
 
 データの復元の一般的な使用例は、誤って変更または削除されたゲスト内の個々のファイルにアクセスすることです。 VM全体をプロビジョニングして単一のファイルにアクセスする必要がなくなるため、必要な時間とリソースを大幅に削減できます。
 
-*Initials*\ **-VeeamServer**コンソール（またはRDPセッション）から**Veeam Backup＆Replication Console**を開きます。
+*Initials*\ **-VeeamServer** コンソール（またはRDPセッション）から **Veeam Backup＆Replication Console** を開きます。
 
 [**Home**]タブで[**Backups**]を展開し、[**Disk**]をクリックします。 個々のファイルを復元するゲストVMディスク（xyz-VeeamBackupTest）を右クリックし、[**Restore guest files**] > [**Microsoft Windows**]を選択します
 
@@ -508,11 +508,11 @@ Prismで復元されたVMの電源を入れ、最新の手動バックアップ�
 
 .. figure:: images/31b.png
 
-Veeamは、バックアップに関連付けられたVMディスクを仮想的にマウントし、それらを**Backup Browser**アプリに表示します。
+Veeamは、バックアップに関連付けられたVMディスクを仮想的にマウントし、それらを **Backup Browser** アプリに表示します。
 
 .. note::
 
-  また、「C：\ VeeamFLR」の下にある*Initials*\ **-VeeamServer**でローカルにファイルレベルの復元マウントを探索することもできます。
+  また、「C：\ VeeamFLR」の下にある*Initials*\ **-VeeamServer** でローカルにファイルレベルの復元マウントを探索することもできます。
 
 復元するファイルに移動して選択します。 右クリックして[**Restore**]を選択します。 **Overwrite** または **Keep** のオプションと、別の場所にコピーを作成する **Copy To** のオプションがあることに注意してください
 リストアするVMのWindows Firewallが無効化できていない場合はクレデンシャル入力後に接続エラーがでます、手動でリストア対象のVMにログインしてFirewallを無効化してください。
@@ -598,7 +598,7 @@ VeeamにNutanix Objectsを設定
 
    - Service Point: https://<IP of Object Store Client IP>
    - Region: <leave default>
-   - Credentials: **Add**をクリックしAccess keyとSecret keyを入力します。これはNutanixオブジェクトでバケットを作成するときにダウンロードしたファイルになります。
+   - Credentials: **Add** をクリックしAccess keyとSecret keyを入力します。これはNutanixオブジェクトでバケットを作成するときにダウンロードしたファイルになります。
 
    .. note:: **Services** > **Objects**に移動してPrism Centralに接続すると、オブジェクトからサービスポイントアドレスを見つけることができます。 テーブル内には、サービスエンドポイントである「Client Used IPs」があります。
 
