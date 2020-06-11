@@ -604,9 +604,9 @@ VeeamにNutanix Objectsを設定
 
       **Services** > **Objects** に移動してPrism Centralに接続すると、オブジェクトからサービスポイントアドレスを見つけることができます。 テーブル内には、サービスエンドポイントである「Client Used IPs」があります。
 
-      .. figure:: images/38.png
+  .. figure:: images/38.png
 
-      .. figure:: images/39.png
+  .. figure:: images/39.png
 
 #. [Next >] をクリックして、証明書のセキュリティ警告を受け入れます
 
